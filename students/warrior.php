@@ -23,6 +23,12 @@ abstract class Warrior extends LocalWarrior {
 
     }
 
+
+    public function setWeapon(Weapon $weapon) {
+
+        $this->weapon = $weapon;
+    }
+
 };
 
 // class StartrekWarrior{} //création classe StartrekWarrior
@@ -81,6 +87,20 @@ class PokemonWarrior extends Warrior{
     
 }
 
+class Weapon {
+    public $id;
+    public $strength;
+    public $imageUrl;
+
+    public function __construct($id, $strength){
+        $this->id=$id;
+        $this->strength=$strength;
+
+    }
+
+
+
+}
 
 
 
